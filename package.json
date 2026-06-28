@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "yarn dist",
-    "dist": "ncc build index.js",
+    "dist": "ncc build index.js && perl -pi -e 's/[ \\t\\r]+$//' dist/index.js",
     "format": "prettier --write --parser typescript \"*.js\"",
     "lint": "eslint --ext .js ."
   },
